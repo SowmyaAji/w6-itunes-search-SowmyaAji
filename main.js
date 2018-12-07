@@ -12,7 +12,7 @@ $('#search-button').on('click', function (event) {
     console.log(query)
 
 
-    $.getJSON("https://itunes.apple.com/search?", { term: query }, function (results) {
+    $.getJSON("https://itunes.apple.com/search?", { media: 'music', term: query }, function (results) {
         console.log(results)
 
         let resultsOnPage = $('#search-results')
@@ -29,10 +29,16 @@ $('#search-button').on('click', function (event) {
 
 function tunesHtml(tunes) {
     return `
-     <p><a href="${tunes.previewUrl}">${tunes.trackName}</a> ${tunes.collectionName} ${tunes.collectionViewUrl} ${tunes.artistViewUrl}</p> `
+     <p class="title"><a href="${tunes.previewUrl}">
+     
+     
+     ${tunes.trackName}</a></p><img src="${tunes.artworkUrl100}">
+    </p><p class"Album"> ${tunes.collectionName}</p><p class="singer"> ${tunes.artistName}</p> <p class="singersite">${tunes.artistViewUrl}</p> `
 }
 
-
+// document.getElementById('#musicbox').addEventListener("click", function (event) {
+//     if (event.target($) { ${ previewU } })
+// })          
 
 
 

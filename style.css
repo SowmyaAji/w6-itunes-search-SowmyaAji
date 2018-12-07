@@ -31,5 +31,39 @@ float: right;
 
 body {
 
-    
+    background-color: black;
+    font-family: Arial;
+    font-size: 16;
+    color: white;
+    text-align: center;
+
 }
+
+.title {
+
+    color: Yellow;
+    font-family: Helvatica;
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+.singer {
+
+    color: lightpink;
+    font-family: Tahoma;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+img {
+    height: 10rem;
+    width: 10rem;
+
+}
+
+a {
+    color: white;
+}
+
