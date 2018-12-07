@@ -1,0 +1,35 @@
+header {
+    background-image: url("https://png.pngtree.com/element_origin_min_pic/17/03/15/613e48eeca903e2bfda5c447f8e7af11.jpg");
+    height: 15rem; 
+}
+
+h1 {
+    font-size: 5rem;
+    font-style: Fantasy;
+    text-align: center;
+    color: red;
+
+}
+
+#search-song {
+
+width: 20rem;
+height: 2rem;
+color: skyblue;
+background-color: white;
+font-size: 16px;
+float: right;
+}
+
+#search-button {
+
+    width: 3rem;
+    height: 2rem;
+    
+
+}
+
+body {
+
+    
+}
