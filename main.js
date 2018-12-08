@@ -29,11 +29,13 @@ $('#search-button').on('click', function (event) {
 
 function tunesHtml(tunes) {
     return `
+    <div data-url="${tunes.previewUrl}">
      <p class="title"><a href="${tunes.previewUrl}" class="results-link">${tunes.trackName}</a></p>
     <p> <img src="${tunes.artworkUrl100}"></p>
      <p class"Album"> ${tunes.collectionName}></p>
      <p class="singer"> ${tunes.artistName}</p>
-    <p class="singersite">${tunes.artistViewUrl}></p> `
+    <p class="singersite">${tunes.artistViewUrl}></p>
+    </div> `
 }
 
 // $('#play').on('click', function (event) {
@@ -45,13 +47,11 @@ function tunesHtml(tunes) {
 
 
 document.getElementById('musicbox').addEventListener("click", function (event) {
-    if (event.target.classList.contains('results-link')) {
+    if (event.target.parentNode.parentNode.getAttribute("data-url")) {
         console.log(event.target.href)
         event.preventDefault()
-        document.getElementById('play').src = event.target.href;
-
-
-
+        document.getElementById('play').src = event.target.parentNode.parentNode.getAttribute("data-url");
+        document.getElementById("play").play()
     }
 })
 
