@@ -11,12 +11,19 @@ h1 {
 
 }
 
-#search-song {
+#musicbox {
+    margin: 2rem;
+    height: 100%;
+    width: 100%;
+    background: skyblue;
 
+}
+
+#search-song {
+margin: 2rem;
 width: 20rem;
 height: 2rem;
-color: skyblue;
-background-color: white;
+background-color: skyblue;
 font-size: 16px;
 float: right;
 }
@@ -30,7 +37,7 @@ float: right;
 }
 
 body {
-
+   
     background-color: black;
     font-family: Arial;
     font-size: 16;
