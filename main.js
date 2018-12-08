@@ -45,13 +45,13 @@ function tunesHtml(tunes) {
 
 
 
-
 document.getElementById('musicbox').addEventListener("click", function (event) {
-    if (event.target.parentNode.parentNode.getAttribute("data-url")) {
-        console.log(event.target.href)
+    let dataUrl = $(event.target).parents("div")[0].dataset["url"];
+    if (dataUrl) {
         event.preventDefault()
-        document.getElementById('play').src = event.target.parentNode.parentNode.getAttribute("data-url");
-        document.getElementById("play").play()
+        document.getElementById('play').src = dataUrl;
+        document.getElementById('play').play()
+
     }
 })
 
